@@ -1,3 +1,7 @@
+# Challenge 2: Fixed XOR
+
+# Write a function that takes two equal-length buffers and produces their XOR combination.
+
 import codecs
 
 def xor(in1, in2):
