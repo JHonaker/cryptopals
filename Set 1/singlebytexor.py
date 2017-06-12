@@ -78,10 +78,11 @@ def score_str(inputstr):
 def cipher(inputstr):
     xor_results = [single_byte_xor(inputstr, letter) for letter in range(256)]
     scores = [score_str(xorstr) for xorstr in xor_results]
-    min_index = scores.index(min(scores))
+    min_score = min(scores)
+    min_index = scores.index(min_score)
     min_code = range(256)[min_index]
 
-    return (min_code, chr(min_code), xor_results[min_index])
+    return (min_code, chr(min_code), min_score, xor_results[min_index])
 
 
 
